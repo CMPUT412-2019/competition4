@@ -40,3 +40,9 @@ We re-use the following components from previous competitions:
 ### Searching for AR cube and target marker
 
 Before performing box-pushing, the robot must know the location of the AR cube and the target AR tag. To accomplish this, we constantly scan for updates to the estimated pose of the AR tags as given by [ar_track_alvar](https://wiki.ros.org/ar_track_alvar). The latest estimate for a particular tag is saved, giving the robot persistent knowledge of these locations. To ensure the robot has seen all required AR tags, it travels back and forth between two waypoints. At each waypoint, the robot slowly performs a full turn. At any point during this turn, if both AR tags have been located, the search is immediately terminated. In practice, both tags are often located before the robot even reaches the first search waypoint, so the search terminates immediately after reaching that waypoint.
+
+
+### Box-pushing
+
+We define the target position of the box as a point 40cm in front of the AR tag at the goal square. We then project a line from this point through the center of the box, and navigate 70cm behind the box along this line. The robot then moves along this line until its projected position of the box is at the goal. We control the robot's direction to ensure it is always facing the goal, regardless of any torque from the box. Once this is finished, the robot backs up until it can see the box again, and if the box is sufficiently far from the goal, the box-pushing process repeats.
+
