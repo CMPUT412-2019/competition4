@@ -14,13 +14,10 @@ The competition took place on the following course (the image is from the class,
 
 The competition requirements were approximately the following: the robot had to follow the white line (starting near location 1) and complete the tasks at location 1, location 2, location 4 and then location 3. The robot had to stop at each long red line, and was required to stay on the white line at all times except during the location 4 tasks.
 
-At location 1, there were up to three red objects, and the robot had to count them.
-
-At location 2, there was a green polygon at up to two red polygons. The robot had to count the total number of polygons, and classify the green polygon as either a triangle, a square or a circle. This polygon was to be saved, as the robot was to look for other polygons of the same type later.
-
-At location 3, the robot there were three red polygons positioned to the right of each of the short red lines shown in the figure. The polygons were, in some random order, a square, a circle or a triangle. The robot had to stop and look at the shape that matched the green shape found in location 2.
-
-At location 4, the robot was required to do two tasks. First, it would search for an AR tag near one of the red squares and push an AR-tagged box to that red square. Next, it would park in the red square that was marked with the polygon it had seen earlier in location 2. Finally, it would navigate back to the white line so it could continue line-following until location 3.
+ * At location 1, there were up to three red objects, and the robot had to count them.
+ * At location 2, there was a green polygon at up to two red polygons. The robot had to count the total number of polygons, and classify the green polygon as either a triangle, a square or a circle. This polygon was to be saved, as the robot was to look for other polygons of the same type later.
+ * At location 3, the robot there were three red polygons positioned to the right of each of the short red lines shown in the figure. The polygons were, in some random order, a square, a circle or a triangle. The robot had to stop and look at the shape that matched the green shape found in location 2.
+ * At location 4, the robot was required to do two tasks. First, it would search for an AR tag near one of the red squares and push an AR-tagged box to that red square. Next, it would park in the red square that was marked with the polygon it had seen earlier in location 2. Finally, it would navigate back to the white line so it could continue line-following until location 3.
 
 
 ## Setup and building
