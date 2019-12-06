@@ -46,3 +46,22 @@ Before performing box-pushing, the robot must know the location of the AR cube a
 
 We define the target position of the box as a point 40cm in front of the AR tag at the goal square. We then project a line from this point through the center of the box, and navigate 70cm behind the box along this line. The robot then moves along this line until its projected position of the box is at the goal. We control the robot's direction to ensure it is always facing the goal, regardless of any torque from the box. Once this is finished, the robot backs up until it can see the box again, and if the box is sufficiently far from the goal, the box-pushing process repeats.
 
+### Shape detection
+
+Our shape detection is much the same, except we changed the backend from OpenCV to a neural network. For training data, we use 37 images of red triangles, 39 images of red squares, and 36 images of red circles. Some of these images are shown below. The rest are available on our [google drive](https://drive.google.com/open?id=1--QkJY5GrKiNM8Kw-sqAc9ELI0G1QXCY).
+
+| Triangle  | Circle | Square
+:----------:|:------:|:------:
+![Triangle](https://drive.google.com/uc?export=view&id=1fSyibMI37ggFP4AP45DoBt0e1TfA3YiP)  |  ![Circle](https://drive.google.com/uc?export=view&id=1hh4aBNYyGnU3gF4OmauCvAtKjBbVnWOP) | ![Square](https://drive.google.com/uc?export=view&id=1ODKOqoYFo_0eyrcIMRpfhaWa2dZ71qR0)
+
+The images are pre-processed by  cropping to the polygon of interest, converting to grayscale by  and resizing to 28x28. Some pre-processed images are below.
+
+| Triangle  | Circle | Square
+:----------:|:------:|:------:
+![Triangle](https://drive.google.com/uc?export=view&id=1EdFXswJdx1mFjoN1f0tSujEzSOHEd-7O)  |  ![Circle](https://drive.google.com/uc?export=view&id=1AWCupErXxZmNlWO4rngqNzZYxq2V5dAL) | ![Square](https://drive.google.com/uc?export=view&id=1BzZ3HCd9wyi9yZH6DqlvFXSAgk_wPBff)
+
+Once pre-processed, we train a model to classify these images according to their shape. We use pytorch's pretrained resnet34, fine-tuned on our images using fastai's one-cycle training for 50 epochs. For further details, see our jupyter notebook on [google colab](https://colab.research.google.com/drive/1QybphdqSyjAzX94g1XvBOjD1zq7Lj2N9).
+
+At inference time, we run the model in a docker instance running python 3 and onnxruntime (we can't run it natively as we use python 2 which is incompatible with onnxruntime). We use opencv to find contours of large red and green potential shapes and find the bounding box of each. We convert each potential shape to grayscale, scale them to be 28x28, and use our trained model to determine whether they are squares, circles or triangles.
+
+The rest of shape detection behaves as before (we use various size/distance/etc. filters to extract the desired shapes from our collection of classified shapes).
