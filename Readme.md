@@ -1,6 +1,10 @@
 # Competition 4
 
-This project shares much of its code with our previous competitions, [competition 2](https://github.com/cmput412-2019/cmput412-competition2) and [competition 3](https://github.com/cmput412-2019/competition3). We refer back to those competitions for many details of our report.
+## Purpose
+
+This repository contains our code for the fourth competition for [CMPUT 412, Experimental Mobile Robotics](https://www.ualberta.ca/computing-science/undergraduate-studies/course-directory/courses/experimental-mobile-robotics). The challenges in each competition are roughly cumulative, and so our solution builds upon our code developed for [competition 2](https://github.com/cmput412-2019/cmput412-competition2) and [competition 3](https://github.com/cmput412-2019/competition3).
+
+As in prior competitions, our robot (a Kobuki Turtlebot) had to run a course which demonstrated line following, shape counting and detection, AR tag detection, and navigation to pre-defined "parking squares" within the course. This competition added *box-pushing*: our robot was tasked with transporting a box (with an AR tag on each side) from a randomly-determined parking square to randomly-defined goal square (marked with a second AR tag). 
 
 ## Setup and building
 
