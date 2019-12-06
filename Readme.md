@@ -50,9 +50,9 @@ Before performing box-pushing, the robot must know the location of the AR cube a
 
 We define the target position of the box as a point 40cm in front of the AR tag at the goal square. We then project a line from this point through the center of the box, and navigate 70cm behind the box along this line. The robot then moves along this line until its projected position of the box is at the goal. We control the robot's direction to ensure it is always facing the goal, regardless of any torque from the box. Once this is finished, the robot backs up until it can see the box again, and if the box is sufficiently far from the goal, the box-pushing process repeats.
 
-### Shape detection
+### Identifying objects
 
-Our shape detection is much the same, except we changed the backend from OpenCV to a neural network. For training data, we use 37 images of red triangles, 39 images of red squares, and 36 images of red circles. Some of these images are shown below. The rest are available on our [google drive](https://drive.google.com/open?id=1--QkJY5GrKiNM8Kw-sqAc9ELI0G1QXCY).
+Our object detection is much the same as [before](https://github.com/cmput412-2019/competition3#identifying-objects), except we changed the shape-detection backend from OpenCV to a neural network. For training data, we use 37 images of red triangles, 39 images of red squares, and 36 images of red circles. Some of these images are shown below. The rest are available on our [google drive](https://drive.google.com/open?id=1--QkJY5GrKiNM8Kw-sqAc9ELI0G1QXCY).
 
 | Triangle  | Circle | Square
 :----------:|:------:|:------:
