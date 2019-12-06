@@ -8,7 +8,7 @@ As in prior competitions, our robot (a Kobuki Turtlebot) had to run a course whi
 
  ![](images/box-pushing.jpg)
 
-The parking squares are marked in red tape. The box always started out within a parking square adjacent to the same wall containing the goal AR tag, and so only ever had to be pushed in the "horizontal" direction (along the wall, or tangential to the goal AR tag's surface normal).
+The parking squares are marked in red tape. The box always started out within a parking square adjacent to the same wall containing the goal AR tag, and so only ever had to be pushed in the "horizontal" direction (along the wall, or perpendicular to the goal AR tag's surface normal).
 
 #### Competition overview
 
