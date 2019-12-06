@@ -6,6 +6,10 @@ This repository contains our code for the fourth competition for [CMPUT 412, Exp
 
 As in prior competitions, our robot (a Kobuki Turtlebot) had to run a course which demonstrated line following, shape counting and detection, AR tag detection, and navigation to pre-defined "parking squares" within the course. This competition added *box-pushing*: our robot was tasked with transporting a box (with an AR tag on each side) from a randomly-determined parking square to randomly-determined goal square (marked with a second AR tag). 
 
+ ![](images/box-pushing.jpg)
+
+The parking squares are marked in red tape. The box always started out within a parking square adjacent to the same wall containing the goal AR tag, and so only ever had to be pushed in the "horizontal" direction (along the wall, or tangential to the goal AR tag's surface normal).
+
 #### Competition overview
 
 The competition took place on the following course (the image is from the class, and does not belong to us):
@@ -18,7 +22,7 @@ The competition requirements were approximately the following: the robot had to 
  * At location 2, there was a green polygon at up to two red polygons. The robot had to count the total number of polygons, and classify the green polygon as either a triangle, a square or a circle. This polygon was to be saved, as the robot was to look for other polygons of the same type later.
  * At location 3, the robot there were three red polygons positioned to the right of each of the short red lines shown in the figure. The polygons were, in some random order, a square, a circle or a triangle. The robot had to stop and look at the shape that matched the green shape found in location 2.
  * At location 4, the robot was required to do two tasks. First, it would search for an AR tag near one of the red squares and push an AR-tagged box to that red square. Next, it would park in the red square that was marked with the polygon it had seen earlier in location 2. Finally, it would navigate back to the white line so it could continue line-following until location 3.
-
+ 
 
 ## Setup and building
 
