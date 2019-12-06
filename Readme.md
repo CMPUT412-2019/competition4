@@ -15,6 +15,8 @@ The parking squares are marked in red tape. The box always started out within a 
 Installation instructions are identical to those in [competition 3](https://github.com/cmput412-2019/competition3#setup-and-building), except
   - The code should be procured by cloning this repository, instead of from the competition 3 release (however, the map from that release should still be used).
   - A block of styrofoam should be attached to the front bumper of the robot to aid box-pushing.
+    ![](images/bumper.jpg)
+    (our exact bumper attachment was modified before this report was written and so could not be photographed, but this image correctly depicts its size and location on the robot)
   - [ar_track_alvar](https://wiki.ros.org/ar_track_alvar) should be installed, as well as any other packages which are missing.
 
 ## Running the code
