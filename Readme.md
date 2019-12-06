@@ -10,7 +10,7 @@ As in prior competitions, our robot (a Kobuki Turtlebot) had to run a course whi
 
 The competition took place on the following course (the image is from the class, and does not belong to us):
 
-[Course image](images/course.png)
+![Course image](images/course.png)
 
 The competition requirements were approximately the following: the robot had to follow the white line (starting near location 1) and complete the tasks at location 1, location 2, location 4 and then location 3. The robot had to stop at each long red line, and was required to stay on the white line at all times except during the location 4 tasks.
 
