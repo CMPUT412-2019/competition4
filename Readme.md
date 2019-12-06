@@ -28,6 +28,7 @@ The competition requirements were approximately the following: the robot had to 
 
 Installation instructions are identical to those in [competition 3](https://github.com/cmput412-2019/competition3#setup-and-building), except
   - The code should be procured by cloning this repository, instead of from the competition 3 release (however, the map from that release should still be used).
+  - Obtain the trained model (fastai_trained.onnx) from the releases of this repository, and copy it to src/feature_detector/scripts/server.
   - A block of styrofoam should be attached to the front bumper of the robot to aid box-pushing.
     ![](images/bumper.jpg)
     (our exact bumper attachment was modified before this report was written and so could not be photographed, but this image correctly depicts its size and location on the robot)
