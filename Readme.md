@@ -6,6 +6,10 @@ This repository contains our code for the fourth competition for [CMPUT 412, Exp
 
 As in prior competitions, our robot (a Kobuki Turtlebot) had to run a course which demonstrated line following, shape counting and detection, AR tag detection, and navigation to pre-defined "parking squares" within the course. This competition added *box-pushing*: our robot was tasked with transporting a box (with an AR tag on each side) from a randomly-determined parking square to randomly-defined goal square (marked with a second AR tag). 
 
+![](images/box-pushing.jpg)
+
+The parking squares are marked in red tape. The box always started out within a parking square adjacent to the same wall containing the goal AR tag, and so only ever had to be pushed in the "horizontal" direction (along the wall, or tangential to the goal AR tag's surface normal).
+
 ## Setup and building
 
 Installation instructions are identical to those in [competition 3](https://github.com/cmput412-2019/competition3#setup-and-building), except
