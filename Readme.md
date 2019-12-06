@@ -7,6 +7,7 @@ This project shares much of its code with our previous competitions, [competitio
 Installation instructions are identical to those in [competition 3](https://github.com/cmput412-2019/competition3#setup-and-building), except
   - The code should be procured by cloning this repository, instead of from the competition 3 release (however, the map from that release should still be used).
   - A block of styrofoam should be attached to the front bumper of the robot to aid box-pushing.
+  - [ar_track_alvar](https://wiki.ros.org/ar_track_alvar) should be installed, as well as any other packages which are missing.
 
 ## Running the code
 
