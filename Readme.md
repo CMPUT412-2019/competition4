@@ -64,8 +64,8 @@ The images are pre-processed by  cropping to the polygon of interest, converting
 :----------:|:------:|:------:
 ![Triangle](https://drive.google.com/uc?export=view&id=1EdFXswJdx1mFjoN1f0tSujEzSOHEd-7O)  |  ![Circle](https://drive.google.com/uc?export=view&id=1AWCupErXxZmNlWO4rngqNzZYxq2V5dAL) | ![Square](https://drive.google.com/uc?export=view&id=1BzZ3HCd9wyi9yZH6DqlvFXSAgk_wPBff)
 
-Once pre-processed, we train a model to classify these images according to their shape. We use pytorch's pretrained resnet34, fine-tuned on our images using fastai's one-cycle training for 50 epochs. For further details, see our jupyter notebook on [google colab](https://colab.research.google.com/drive/1QybphdqSyjAzX94g1XvBOjD1zq7Lj2N9).
+Once pre-processed, we train a model to classify these images according to their shape. We use pytorch's pretrained resnet34, and fine-tuned on our images using fastai's one-cycle training for 50 epochs. For further details, see our jupyter notebook on [google colab](https://colab.research.google.com/drive/1QybphdqSyjAzX94g1XvBOjD1zq7Lj2N9).
 
 At inference time, we run the model in a docker container running python 3 and onnxruntime (we can't run it natively as we use python 2 which is incompatible with onnxruntime). We use opencv to find contours of large red and green potential shapes and find the bounding box of each. We convert each potential shape to grayscale, scale them to be 28x28, and use our trained model to determine whether they are squares, circles or triangles.
 
-The rest of shape detection behaves as before (we use various size/distance/etc. filters to extract the desired shapes from our collection of classified shapes).
+The rest of shape detection (such as the use of size and distance filters) functions as before.
